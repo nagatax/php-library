@@ -1,0 +1,11 @@
+# composer install folder
+vendor/
+
+# phpstorm
+.idea/*
+
+# mac only
+.DS_Store
+
+# coverage report
+report/*
