@@ -1,0 +1,16 @@
+<phpunit colors="true" bootstrap="src/bootstrap.php">
+    <testsuites>
+        <testsuite name="mainTests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <!-- コードカバレッジを取得 -->
+        <log type="coverage-html" target="./report" lowUpperBound="35" highLowerBound="70" />
+    </logging>
+</phpunit>

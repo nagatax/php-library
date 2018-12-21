@@ -2,7 +2,7 @@
 vendor/
 
 # phpstorm
-.idea/*
+.idea
 
 # mac only
 .DS_Store
