@@ -21,6 +21,8 @@ class ArrayUtilTest extends TestCase
 
     /**
      * isArrayContainsのテスト
+     *
+     * 配列1(arr1)に配列2(arr2)が含まれること
      */
     public function test_isArrayContains_配列1に配列2が含まれること(): void
     {
@@ -32,6 +34,8 @@ class ArrayUtilTest extends TestCase
 
     /**
      * isArrayContainsのテスト
+     *
+     * 配列1(arr1)に配列2(arr2)が含まれないこと
      */
     public function test_isArrayContains_配列1に配列2が含まれないこと(): void
     {
