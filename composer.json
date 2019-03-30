@@ -1,4 +1,9 @@
 {
+  "autoload": {
+    "psr-4": {
+      "PHPLibrary\\": "src/"
+    }
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "phpmd/phpmd" : "*",
