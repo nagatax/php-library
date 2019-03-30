@@ -20,17 +20,49 @@ class ArgsTest extends TestCase
     }
 
     /**
-     * 引数なしのチェック
+     * getArgsのテスト
+     *
+     * コマンドライン引数が取得できること。
+     *
+     * テスト時にグローバル変数を設定するため
+     * backupGlobalsアノテーションを有効にし
+     * テスト終了後にグローバル変数を復元する。
      *
      * @return void
      * @throws \Exception
+     * @backupGlobals enabled
      */
-    public function testGetArgs(): void
+    public function test_getArgs_コマンドライン引数が取得できること(): void
+    {
+        $GLOBALS['argv'] = array('testCommand', '--testArg1', '-tA2');
+        $GLOBALS['argc'] = count($GLOBALS['argv']);
+
+        // テストコードを実行する
+        $this->assertIsArray($this->sut->getArgs());
+    }
+
+    /**
+     * getArgsのテスト
+     *
+     * 例外が発生すること。
+     *
+     * テスト時にグローバル変数を設定するため
+     * backupGlobalsアノテーションを有効にし
+     * テスト終了後にグローバル変数を復元する。
+     *
+     * @return void
+     * @throws \Exception
+     * @backupGlobals enabled
+     */
+    public function test_getArgs_例外が発生すること(): void
     {
         // 検知する例外を定義する
         $this->expectException("Exception");
 
+        $GLOBALS['argv'] = array();
+        $GLOBALS['argc'] = count($GLOBALS['argv']);
+
         // テストコードを実行する
-        $this->sut->getArgs();
+        $this->assertIsArray($this->sut->getArgs());
     }
 }
