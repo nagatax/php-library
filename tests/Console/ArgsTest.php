@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: nagata
- * Date: 2018/12/20
- * Time: 17:31
- */
 
 namespace console;
 

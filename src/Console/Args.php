@@ -23,7 +23,7 @@ class Args
      * @return string|false
      * @throws \Exception
      */
-    public function getArgs(string $opt = null) : string
+    public function getArgs(string $opt = null): string
     {
         if (empty($argv)) {
             throw (new \Exception('コマンドライン引数が未設定です'));
