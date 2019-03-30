@@ -23,10 +23,14 @@ class ArgsTest extends TestCase
      * 引数なしのチェック
      *
      * @return void
-     * @expectedException \Exception
+     * @throws \Exception
      */
-    public function testGetArgs()
+    public function testGetArgs(): void
     {
+        // 検知する例外を定義する
+        $this->expectException("Exception");
+
+        // テストコードを実行する
         $this->sut->getArgs();
     }
 }
