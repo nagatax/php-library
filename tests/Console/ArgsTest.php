@@ -14,7 +14,7 @@ class ArgsTest extends TestCase
      *
      * @return void
      */
-    public function setUp()
+    protected function setUp(): void
     {
         $this->sut = new Args();
     }
