@@ -20,15 +20,18 @@ class Args
      * コマンドライン引数を取得する。
      *
      * @param string $opt オプション
-     * @return string|false
+     * @return array
      * @throws \Exception
      */
-    public function getArgs(string $opt = null): string
+    public function getArgs(): array
     {
-        if (empty($argv)) {
+        global $argv;
+        global $argc;
+
+        if (isset($argc) && $argc <= 1) {
             throw (new \Exception('コマンドライン引数が未設定です'));
         }
 
-        return json_encode($argv);
+        return $argv;
     }
 }
