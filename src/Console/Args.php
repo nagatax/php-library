@@ -19,7 +19,7 @@ class Args
      *
      * コマンドライン引数を取得する。
      *
-     * @param string $opt
+     * @param string $opt オプション
      * @return string|false
      * @throws \Exception
      */
