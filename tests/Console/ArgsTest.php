@@ -6,7 +6,7 @@ use \PHPUnit\Framework\TestCase;
 
 class ArgsTest extends TestCase
 {
-    /** @var Args */
+    /** @var \PHPLibrary\Console\Args */
     private $sut;
 
     /**
