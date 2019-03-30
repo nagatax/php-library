@@ -1,6 +1,6 @@
 <?php
 
-namespace console;
+namespace PHPLibrary\Console;
 
 use \PHPUnit\Framework\TestCase;
 
