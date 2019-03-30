@@ -8,6 +8,6 @@
     "squizlabs/php_codesniffer": "*",
     "phpmd/phpmd": "*",
     "phpunit/phpunit": "*",
-    "illuminate/console": "*"
+    "phpdocumentor/phpdocumentor": "*"
   }
 }
