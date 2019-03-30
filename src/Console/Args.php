@@ -1,8 +1,6 @@
 <?php
 
-namespace console;
-
-use \Exception;
+namespace PHPLibrary\Console;
 
 require_once __DIR__ . "/../bootstrap.php";
 
@@ -28,7 +26,7 @@ class Args
     public function getArgs(string $opt = null) : string
     {
         if (empty($argv)) {
-            throw (new Exception('コマンドライン引数が未設定です'));
+            throw (new \Exception('コマンドライン引数が未設定です'));
         }
 
         return json_encode($argv);
