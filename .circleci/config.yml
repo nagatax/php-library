@@ -4,9 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-    working_directory: ./
+    #    working_directory: ./
     steps:
-      - checkout
+      #      - checkout
       - run: sudo composer self-update
       - restore_cache:
           keys:
@@ -17,13 +17,13 @@ jobs:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
             - vendor
-      #    - restore_cache:
-      #        keys:
-      #          - node-v1-{{ checksum "package.json" }}
-      #          - node-v1-
-      #    - run: yarn install
-      #    - save_cache:
-      #        key: node-v1-{{ checksum "package.json" }}
-      #        path:
-      #          - node_modules
+      #          - restore_cache:
+      #              keys:
+      #                - node-v1-{{ checksum "package.json" }}
+      #                - node-v1-
+      #          - run: yarn install
+      #          - save_cache:
+      #              key: node-v1-{{ checksum "package.json" }}
+      #              path:
+      #                - node_modules
       - run: ./vendor/bin/phpunit
