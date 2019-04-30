@@ -4,9 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-    #    working_directory: ./
+    working_directory: ~/php
     steps:
-      #      - checkout
+      - checkout
       - run: sudo composer self-update
       - restore_cache:
           keys:
