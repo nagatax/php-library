@@ -44,4 +44,35 @@ class ArrayUtilTest extends TestCase
 
         $this->assertFalse($this->sut->isArrayContains($arr1, $arr2));
     }
+
+    /**
+     * isEqualArrayのテスト
+     */
+    public function test_isEqualArray_配列の比較結果が取得できること(): void
+    {
+        // 配列が完全一致すること
+        $arr1 = [1, 2, 3];
+        $arr2 = [1, 2, 3];
+
+        $actual = $this->sut->isEqualArray($arr1, $arr2, true);
+        $this->assertTrue($actual);
+
+        $arr1 = [1, 2, 3];
+        $arr2 = [1, 2, '3'];
+
+        $actual = $this->sut->isEqualArray($arr1, $arr2, true);
+        $this->assertFalse($actual);
+
+        $arr1 = [1, 2, 3];
+        $arr2 = [1, 2, '3'];
+
+        $actual = $this->sut->isEqualArray($arr1, $arr2);
+        $this->assertTrue($actual);
+
+        $arr1 = [1, 2, 3];
+        $arr2 = [1, 2];
+
+        $actual = $this->sut->isEqualArray($arr1, $arr2);
+        $this->assertFalse($actual);
+    }
 }
