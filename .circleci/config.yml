@@ -7,7 +7,7 @@ jobs:
     working_directory: ~/php
     steps:
       - checkout
-      - run: sudo docker-php-ext-install bcmath
+      - run: sudo docker-php-ext-install bcmath   # PHP Extensionのインストール
       - run: sudo composer self-update
       - restore_cache:
           keys:
