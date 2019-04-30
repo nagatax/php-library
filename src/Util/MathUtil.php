@@ -33,6 +33,20 @@ class MathUtil
     }
 
     /**
+     * 2つの任意精度数値を比較する
+     * (無限循環小数を考慮)
+     *
+     * @param string $left_operand 左オペランド
+     * @param string $right_operand 右オペランド
+     * @param int $scale 小数点以下の桁数
+     * @return int 比較結果
+     */
+    public function bccomp($left_operand, $right_operand, $scale = 0): int
+    {
+        return bccomp($left_operand, $right_operand, $scale);
+    }
+
+    /**
      * 階乗の計算
      *
      * @param int $num 自然数
