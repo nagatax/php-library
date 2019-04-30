@@ -36,4 +36,26 @@ class MathUtilTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+
+    /**
+     * bcmulのテスト
+     *
+     * 任意精度数学関数(乗算)を利用し、計算結果が0.8になること
+     */
+    public function test_bcmul_乗算結果が正しく取得できること(): void
+    {
+        $expected = 8;
+        $actual = $this->sut->bcmul(0.8, 10, 1);
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * 階乗の計算結果が正しいこと
+     */
+    public function test_factorial_計算結果が120になること(): void
+    {
+        $expected = 120;
+        $actual = $this->sut->factorial(5);
+        $this->assertEquals($expected, $actual);
+    }
 }
