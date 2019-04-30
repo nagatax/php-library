@@ -28,3 +28,8 @@ jobs:
       #              path:
       #                - node_modules
       - run: ./vendor/bin/phpunit
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
