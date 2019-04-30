@@ -33,8 +33,8 @@ class MathUtil
     /**
      * 階乗の計算
      *
-     * @param int $num 求める階乗
-     * @return int
+     * @param int $num 自然数
+     * @return int 1からnの総積
      */
     public function factorial(int $num): int
     {
