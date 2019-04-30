@@ -5,7 +5,8 @@ namespace PHPLibrary\Util;
 class MathUtil
 {
     /**
-     * 無限循環小数を考慮して、加算計算を行う
+     * 2つの任意精度の数値を加算する
+     * (無限循環小数を考慮)
      *
      * @param string $left_operand 左オペランド
      * @param string $right_operand 右オペランド
@@ -18,7 +19,8 @@ class MathUtil
     }
 
     /**
-     * 無限循環小数を考慮して、乗算計算を行う
+     * 2つの任意精度数値の乗算を行う
+     * (無限循環小数を考慮)
      *
      * @param string $left_operand 左オペランド
      * @param string $right_operand 右オペランド
