@@ -2,8 +2,6 @@
 
 namespace PHPLibrary\Http;
 
-require_once __DIR__ . "/../bootstrap.php";
-
 class Csrf
 {
     /**

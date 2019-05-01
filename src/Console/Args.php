@@ -2,8 +2,6 @@
 
 namespace PHPLibrary\Console;
 
-require_once __DIR__ . "/../bootstrap.php";
-
 class Args
 {
     /**
