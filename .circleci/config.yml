@@ -18,15 +18,12 @@ jobs:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
             - vendor
-      #          - restore_cache:
-      #              keys:
-      #                - node-v1-{{ checksum "package.json" }}
-      #                - node-v1-
-      #          - run: yarn install
-      #          - save_cache:
-      #              key: node-v1-{{ checksum "package.json" }}
-      #              path:
-      #                - node_modules
+      # Install latest version. (Install it into ./bin/ by default).
+      - run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s
+      # Check coding style
+      - run: ./vendor/bin/phpcs --config-set installed_paths ./phpcs_custom_ruleset.xml
+      - run: ./vendor/bin/phpcs --standard=./phpcs_custom_ruleset.xml
+      # Execute PHPUnit
       - run: ./vendor/bin/phpunit
 workflows:
   version: 2
