@@ -18,11 +18,11 @@ jobs:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
             - vendor
-      # Install latest version. (Install it into ./bin/ by default).
-      - run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
       # Check coding style
       - run: ./vendor/bin/phpcs --config-set installed_paths ./phpcs_custom_ruleset.xml
-      - run: ./vendor/bin/phpcs --standard=./phpcs_custom_ruleset.xml | ./bin/reviewdog -f=phpstan -reporter=github-pr-review
+      - run: ./vendor/bin/phpcs --standard=./phpcs_custom_ruleset.xml
+      #      - run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
+      #      - run: ./vendor/bin/phpcs --standard=./phpcs_custom_ruleset.xml | ./bin/reviewdog -f=phpstan -reporter=github-pr-review
       # Execute PHPUnit
       - run: ./vendor/bin/phpunit
 workflows:
