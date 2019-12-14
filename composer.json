@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "phpunit": "./vendor/bin/phpunit",
+    "phpcs": "./vendor/bin/phpcs --standard=PSR2 src/ tests/",
+    "phpmd": "./vendor/bin/phpmd src/ text codesize,controversial,design,naming,unusedcode"
+  },
   "autoload": {
     "psr-4": {
       "PHPLibrary\\": "src/"
