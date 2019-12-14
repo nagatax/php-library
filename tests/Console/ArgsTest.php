@@ -32,7 +32,7 @@ class ArgsTest extends TestCase
      * @throws \Exception
      * @backupGlobals enabled
      */
-    public function test_getArgs_コマンドライン引数が取得できること(): void
+    public function testGetArgs_コマンドライン引数が取得できること(): void
     {
         $GLOBALS['argv'] = array('testCommand', '--testArg1', '-tA2');
         $GLOBALS['argc'] = count($GLOBALS['argv']);
@@ -54,7 +54,7 @@ class ArgsTest extends TestCase
      * @throws \Exception
      * @backupGlobals enabled
      */
-    public function test_getArgs_例外が発生すること(): void
+    public function testGetArgs_例外が発生すること(): void
     {
         // 検知する例外を定義する
         $this->expectException("Exception");
