@@ -1,4 +1,6 @@
 {
+  "name": "nagatax/php-library",
+  "description": "These are php libraries.",
   "scripts": {
     "phpcbf": "./vendor/bin/phpcbf --standard=PSR2 src/ tests/",
     "phpcs": "./vendor/bin/phpcs --standard=PSR2 src/ tests/",
